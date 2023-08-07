@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 
+
 const cors = require('cors');
 const csurf = require('csurf');
 const { isProduction } = require('./config/keys');
@@ -11,6 +12,7 @@ const { isProduction } = require('./config/keys');
 const app = express();
 require('./models/User');
 require('./config/passport');
+require('./models/Tweet'); 
 const passport = require('passport');
 
 app.use(logger('dev'));
